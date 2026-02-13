@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Powered by Gemini</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <!-- Chat Card -->
+                <div class="card chat-card shadow-lg">
+                    <!-- Header -->
+                    <div class="card-header text-white d-flex align-items-center">
+                        <i class="bi bi-chat-dots-fill me-2 fs-4"></i>
+                        <h5 class="mb-0">AI Chatbot</h5>
+                        <small class="ms-auto text-white-50">Powered by Gemini</small>
+                    </div>
+                    
+                    <!-- Chat Messages Container -->
+                    <div class="card-body chat-body" id="chatBody">
+                        <!-- Welcome Message -->
+                        <div class="message bot-message">
+                            <div class="message-content">
+                                <div class="avatar bot-avatar">
+                                    <i class="bi bi-robot"></i>
+                                </div>
+                                <div class="bubble bot-bubble">
+                                    <p class="mb-0">👋 Hello! I'm your AI assistant powered by Google Gemini. How can I help you today?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Input Area -->
+                    <div class="card-footer bg-white">
+                        <form id="chatForm" class="d-flex gap-2">
+                            <input 
+                                type="text" 
+                                id="messageInput" 
+                                class="form-control" 
+                                placeholder="Type your message..." 
+                                autocomplete="off"
+                                required
+                            >
+                            <button type="submit" class="btn btn-primary" id="sendButton">
+                                <i class="bi bi-send-fill"></i>
+                                <span class="d-none d-sm-inline ms-1">Send</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Footer Info -->
+                <div class="text-center mt-3 text-muted small">
+                    <p class="mb-0">
+                        <i class="bi bi-info-circle"></i> 
+                        Your conversations are powered by Google Gemini AI
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Config (API Key) -->
+    <script src="config.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
